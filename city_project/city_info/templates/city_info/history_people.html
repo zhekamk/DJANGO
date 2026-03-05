@@ -1,0 +1,56 @@
+{% extends 'city_info/base.html' %}
+
+{% block content %}
+<div class="container border-start border-primary border-4 ps-4 mb-5">
+    <h1 class="display-5 fw-bold">🌟 Відомі постаті нашого міста</h1>
+    <p class="lead text-muted">Люди, які прославили наш край та зробили вагомий внесок у його розвиток.</p>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <!-- Перша картка -->
+    <div class="col">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+                <div class="badge bg-primary mb-2">Мистецтво</div>
+                <h5 class="card-title fw-bold">Іван Котляревський</h5>
+                <p class="card-text">Видатний український письменник, поет та драматург, засновник нової української літератури.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="#" class="btn btn-outline-primary btn-sm">Детальніше</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Друга картка -->
+    <div class="col">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+                <div class="badge bg-success mb-2">Наука</div>
+                <h5 class="card-title fw-bold">Ігор Сікорський</h5>
+                <p class="card-text">Всесвітньо відомий авіаконструктор, творець перших у світі багатомоторних літаків та вертольотів.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="#" class="btn btn-outline-success btn-sm">Біографія</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Третя картка -->
+    <div class="col">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+                <div class="badge bg-warning text-dark mb-2">Спорт</div>
+                <h5 class="card-title fw-bold">Сергій Бубка</h5>
+                <p class="card-text">Легендарний легкоатлет, багаторазовий рекордсмен світу у стрибках з жердиною.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+                <a href="#" class="btn btn-outline-warning btn-sm text-dark">Досягнення</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-5">
+    <a href="{% url 'history' %}" class="btn btn-link">← Повернутися до розділу "Історія"</a>
+</div>
+{% endblock %}

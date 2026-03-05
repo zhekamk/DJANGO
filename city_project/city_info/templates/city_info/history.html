@@ -1,0 +1,12 @@
+{% extends 'city/base.html' %}
+
+{% block content %}
+    <div class="card shadow p-4">
+        <h1> Історія нашого міста</h1>
+        <p>Місто було засноване багато століть тому...</p>
+        <div class="mt-3">
+            <a href="{% url 'history_people' %}" class="btn btn-outline-secondary">Відомі мешканці</a>
+            <a href="{% url 'history_photos' %}" class="btn btn-outline-secondary">Архівні фото</a>
+        </div>
+    </div>
+{% endblock %}

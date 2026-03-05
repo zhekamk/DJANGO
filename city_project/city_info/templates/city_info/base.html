@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net" rel="stylesheet">
+    <title>Місто</title>
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">🏙️ Портал міста</a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="{% url 'home' %}">Головна</a>
+                <a class="nav-link" href="{% url 'news' %}">Новини</a>
+                <a class="nav-link" href="{% url 'management' %}">Керівництво</a>
+                <a class="nav-link" href="{% url 'facts' %}">Факти</a>
+                <a class="nav-link" href="{% url 'contacts' %}">Контакти</a>
+
+                <!-- Випадаюче меню для Завдання 2 -->
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Історія</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{% url 'history' %}">Загальна</a></li>
+                        <li><a class="dropdown-item" href="{% url 'history_people' %}">Відомі люди</a></li>
+                        <li><a class="dropdown-item" href="{% url 'history_photos' %}">Фото</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    <script src="https://cdn.jsdelivr.net"></script>
+</body>
+</html>
