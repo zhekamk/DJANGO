@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Який сьогодні день?</title>
+    <link href="https://cdn.jsdelivr.net" rel="stylesheet">
+    <style>
+        body {
+            /* Динамічний фон через static */
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url("{% static bg_image %}") no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="glass-card shadow-lg">
+        <h2 class="display-6">Сьогодні у нас:</h2>
+        <h1 class="display-1 fw-bold">{{ day_name }}</h1>
+    </div>
+</body>
+</html>
